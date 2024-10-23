@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui;
+    color: #ffffff;
+    text-align: justify;
+    font-weight: bold;
+}
+/* Estilo da imagem grande da logo no início */
+.logo-inicial {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo-grande {
+    width: 50%; /* Aumente ou diminua conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.cabecalho-menu-item {
+    background-color: #460066;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+.já-pra-forca, .velho-oeste, .macaco {
+    background-color: rgba(80, 0, 133, 0.103);
+    margin: 20px auto; /* 'auto' centraliza horizontalmente */
+    text-align: justify;
+    display: block; /* Exibe como bloco */
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: bold; /* Negrito no texto */
+    transition: transform 0.3s ease;
+    width: 70%; /* Ajuste da largura para acomodar texto e imagem */
+    overflow: hidden; /* Para evitar que o conteúdo vaze */
+}
+.Bem-vindo {
+    background-color: rgba(80, 0, 133, 0.103);
+    margin: 20px auto; /* 'auto' centraliza horizontalmente */
+    text-align: justify;
+    display: block; /* Exibe como bloco */
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: lighter;
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+.jogos {
+    background-color: rgba(0, 0, 0, 0.726);
+    margin: 20px auto; /* 'auto' centraliza horizontalmente */
+    text-align: justify;
+    display: block; /* Exibe como bloco */
+    padding: 10px 20px;
+    border: 1px solid rgba(65, 1, 107, 0.363);
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: lighter;
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+.encaminhar a {
+    color: rgba(2, 80, 126, 0.61); /* Define a cor rosa */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    
+}
+
+.logo {
+    width: 200px; /* ajuste conforme necessário */
+    height: 50; /* mantém a proporção */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.jogo h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.jogo p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff4654;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features {
+    padding: 40px 20px;
+    
+}
+
+.features h2 {
+    margin-bottom: 30px;
+}
+
+.feature {
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+.footer-logo {
+    width: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+/* Estiliza o vídeo de fundo */
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que o vídeo preencha a tela */
+}
+
+.jogo-imagem {
+    width: 700px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin: 0 auto 20px auto; /* Centraliza horizontalmente e adiciona margem inferior */
+    display: block; /* Garantir que a imagem seja um bloco */
+    border-radius: 10px; /* Deixa as bordas da imagem arredondadas */
+}

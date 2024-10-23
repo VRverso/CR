@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JÁ PRA FORCA</title>
+    <link rel="icon" href="Logotipo 500x500  px. (4).png" type="image/x-icon"> 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color:rgba(209, 172, 203, 0.863);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-color: rgba(212, 139, 200, 0.781);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            padding: 30px 50px;
+            font-size: 18px;
+            background-color: #64ac35;
+            color: white;
+            border: 50px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin: 0 auto;
+            box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .jogos-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .jogo1, .jogo2, .jogo3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50px;
+            width: 530px;
+            height: 500px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-align: center;
+      
+        }
+
+        .jogo1 {
+            background-image: url('Logotipo 500x500  px. (10).png');
+        }
+        .jogo3 {
+            background-image: url('Logotipo 500x500  px. (9).png');
+        }
+
+        .jogo2 {
+            background-image: url('Logotipo 500x500  px. (11).png');
+        }
+
+        .jogo-link {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            line-height: 400px;
+        }
+
+        .jogo1:hover, .jogo2:hover, .jogo3:hover {
+            transform: scale(1.2);
+        }
+
+        .video-fundo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .conteudo {
+            text-align: center;
+            margin: 50px auto;
+            size: 600px;
+        }
+
+        .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3d3c3cf3;
+        }
+
+        .cabecalho {
+            background-image: url('pink-texture-11.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 7px;
+            text-align: center;
+            color: white;
+        }
+
+        .cabecalho-menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-weight: bold; 
+        }
+
+        .cabecalho-menu-item {
+            text-decoration: none;
+            font-size: 1.2em;
+            border: none;
+            transition: transform 0.3s;
+            width: 160px;
+            height: 60px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: transparent; /* Torna o texto invisível, mas o espaço ainda é reservado */
+}
+button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff98e5;
+            color: white;
+            border: none; /* Corrigido para 'none' */;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            margin: 10px; /* Margem entre os botões */
+            border-radius: 20px;
+        }
+
+        button:hover {
+            background-color: #81236a; /* Cor de fundo ao passar o mouse */
+        } 
+
+        .cabecalho-menu-item:hover {
+            opacity: 0.8;
+        }
+
+        .imagem-canto-esquerdo {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100px;
+            height: auto;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .conteudo img {
+            margin-bottom: 60px;
+            height: 600px;
+            margin-top: 0;
+        }
+
+        .container-imagem {
+            max-width: 100%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .container-imagem img {
+            max-width: 400px;
+            width: 200%;
+            height: 150px;
+            border-radius: 20px;
+        }
+
+        .container-imagem:hover {
+            transform: scale(1.3);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container-inicio {
+    background-image: url('Logotipo 500x500  px. (16).png');
+    background-size: cover;
+}
+
+.container-jogos {
+    background-image: url('Logotipo 500x500  px. (17).png');
+    background-size: cover;
+}
+
+.container-sobre {
+    background-image: url('Logotipo 500x500  px. (19).png');
+    background-size: cover;
+}
+
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1><img src="logo.VRverso.png" alt="" class="logo" /></h1>
+        <nav>
+            <button onclick="location.href='index.html'">Início</button>
+            <button onclick="location.href='jogos.html'">Jogos</button>
+            <button onclick="location.href='sobre.html'">Sobre</button>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section id="home">
+            <div class="content">
+                <img src="Logotipo 500x500  px. (5).png" alt="Imagem Central">
+            </div>
+        </section>
+        <div class="container-imagem">
+            <img src="Miniatura do YouTube 1280x720  px. (5).png" alt="Nova Imagem no Container">
+        </div>
+
+        <div class="jogos-container">
+            <section class="jogo1">
+                <a href="famoso.html" class="jogo-link"></a>
+            </section>
+
+            <section class="jogo2">
+                <a href="fruta.html" class="jogo-link"></a>
+            </section>
+
+            <section class="jogo3">
+                <a href="paises.html" class="jogo-link"></a>
+            </section>
+        </div>
+    </main>
+
+    <div class="video-fundo">
+        <video autoplay muted loop class="video">
+            <source src="papel.mp4" type="video/mp4">
+        </video>
+    </div>
+    <img src="Logotipo 500x500  px. (14).png" alt="Descrição da imagem" class="imagem-canto-esquerdo">
+    <footer>
+        <p>&copy; 2024 VR verso.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final3.css">
+    <link rel="icon" href="simbolomacaco.png" type="image/x-icon">
+    <title>A Fuga Dos Macacos</title>
+</head>
+<body>
+    <header>
+        <h1><img src="logo.VRverso.png" alt="" class="logo" /></h1>
+        <nav>
+            <header class="cabecalho">
+               <nav class="cabecalho-menu">
+                 <a class="cabecalho-menu-item" href="index.html">Início</a>
+                 <a class="cabecalho-menu-item" href="jogos.html" >Jogos</a>
+                 <a class="cabecalho-menu-item" href="sobre.html" >Sobre</a>
+             </header>
+        </nav>
+    </header>
+    <div id="game-container" class="hidden"> <!-- Inicialmente oculto -->
+        <div id="maze"></div>
+        <div id="timer">Tempo restante: <span id="time-left">60</span>s</div>
+        <div id="game-over" class="hidden">
+            <h2>Game Over!</h2>
+            <p id="completed-mazes"></p>
+            <p>Pressione F5 para reiniciar.</p>
+        </div>
+    </div>
+
+    <!-- Tela inicial -->
+    <div id="start-screen">
+        <button id="start-button">Start</button>
+    </div>
+
+    <script src="final3.js"></script>
+</body>
+</html>

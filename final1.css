@@ -1,0 +1,204 @@
+/* Estilo geral do corpo da página */
+body {
+    margin: 0; /* Remove margens padrão */
+    overflow: hidden; /* Esconde barras de rolagem */
+    font-family: 'Press Start 2P', cursive; /* Define a fonte */
+    background-image: url('fundo.png'); /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    color: white; /* Define a cor do texto */
+}
+
+header {
+    position: relative; /* Permite que o cabeçalho tenha z-index */
+    z-index: 20; /* Deve ser maior que o do startScreen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    width: 100%; /* O cabeçalho ocupará a largura total da página */
+    height: 60px; /* Altura do cabeçalho */
+}
+.cabecalho-menu-item {
+    background-color: #00013b;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+.logo {
+    width: 200px; /* ajuste conforme necessário */
+    height: 50; /* mantém a proporção */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* Estilo da tela de início */
+#startScreen {
+    position: fixed; /* Fixa a tela de início na posição */
+    background-image: url('start.jpg');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Para evitar repetição */
+    background-position: center; /* Para centralizar a imagem */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100vw; /* Largura total da tela */
+    height: 100vh; /* Altura total da tela */
+    color: black; /* Cor do texto */
+    z-index: 10; /* Define a camada abaixo do cabeçalho */
+    text-align: center; /* Centraliza o texto */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Organiza filhos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+/* Estilo do botão de iniciar */
+#startButton {
+    background-color: black; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 15px 30px; /* Espaço interno do botão */
+    font-size: 20px; /* Tamanho da fonte do botão */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    margin-top: 300px; /* Espaço acima do botão */
+}
+
+/* Estilo da área do jogo */
+#gameArea {
+    position: relative; /* Permite posicionar elementos filhos */
+    width: 100vw; /* Largura total da tela */
+    height: 90vh; /* Altura total da tela */
+    overflow: hidden; /* Esconde elementos que saem da área */
+}
+
+/* Estilo da tela de game over */
+#gameOver {
+    position: fixed; /* Fixa a tela de game over na posição */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100vw; /* Largura total da tela */
+    height: 100vh; /* Altura total da tela */
+    text-align: justify; /* Alinha o texto justificado */
+    background-color: black; /* Cor de fundo da tela de game over */
+    color: white; /* Cor do texto */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Organiza filhos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+/* Estilo do personagem (cowboy) */
+#cowboy {
+    position: absolute; /* Permite posicionamento absoluto */
+    bottom: 20px; /* Distância do fundo */
+    left: 50%; /* Alinha ao centro horizontal */
+    transform: translateX(-50%); /* Ajusta a posição para o centro */
+    width: 80px; /* Largura do personagem */
+    height: 129px; /* Altura do personagem */
+    background-image: url('personagem.gif'); /* Imagem do personagem */
+    background-size: contain; /* Faz a imagem se ajustar sem ser cortada */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+/* Estilo das vacas inimigas */
+.cow {
+    position: absolute; /* Permite posicionamento absoluto */
+    width:  70px; /* Largura da vaca */
+    height: 90px; /* Altura da vaca */
+    background-image: url('inimigo.png'); /* Imagem da vaca inimiga */
+    background-size: contain; /* Faz a imagem cobrir todo o espaço */
+    animation: cowAppear 1s ease-out; /* Animação de aparição */
+    background-repeat: no-repeat;
+}
+
+/* Estilo do tiro */
+.bullet {
+    position: absolute; /* Permite posicionamento absoluto */
+    width: 30px; /* Largura do tiro */
+    height: 30px; /* Altura do tiro */
+    background-image: url('tiro.png'); /* Imagem do tiro */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    bottom: 0; /* Posiciona na parte inferior */
+}
+
+/* Estilo da explosão ao atingir a vaca */
+.explosion-enemy {
+    position: absolute; /* Permite posicionamento absoluto */
+    width: 100px; /* Largura da explosão */
+    height: 100px; /* Altura da explosão */
+    background-image: url('explosaoagua.png'); /* Imagem da explosão */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    animation: explode-enemy 0.5s forwards; /* Animação da explosão */
+}
+
+/* Animação da explosão da vaca */
+@keyframes explode-enemy {
+    0% { transform: scale(1); opacity: 1; } /* Estado inicial */
+    100% { transform: scale(2); opacity: 0; } /* Estado final */
+}
+
+/* Estilo da explosão ao atingir o jogador */
+.explosion-player {
+    position: absolute; /* Permite posicionamento absoluto */
+    width: 100px; /* Largura da explosão */
+    height: 120px; /* Altura da explosão */
+    background-image: url('explosao.png'); /* Imagem da explosão */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    animation: explode-player 0.5s forwards; /* Animação da explosão */
+}
+
+/* Animação da explosão do jogador */
+@keyframes explode-player {
+    0% { transform: scale(1); opacity: 1; } /* Estado inicial */
+    100% { transform: scale(2.5); opacity: 0; } /* Estado final */
+}
+
+/* Animação de aparição da vaca */
+@keyframes cowAppear {
+    0% {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(-50px); /* Move para cima */
+    }
+    100% {
+        opacity: 1; /* Fica visível */
+        transform: translateY(0); /* Volta para a posição original */
+    }
+}
+
+/* Estilo dos elementos de pontuação e temporizador */
+#score, #lives, #timer {
+    position: absolute; /* Permite posicionamento absoluto */
+    top: 10px; /* Distância do topo */
+    font-size: 15px; /* Tamanho da fonte */
+}
+
+/* Estilo da pontuação */
+#score {
+    left: 10px; /* Distância da esquerda */
+}
+
+/* Estilo das vidas */
+#lives {
+    left: 500px; /* Distância da esquerda */
+}
+
+/* Estilo do temporizador */
+#timer {
+    right: 10px; /* Distância da direita */
+}

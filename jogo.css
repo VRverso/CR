@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: rgb(46, 46, 46);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.cabecalho-menu-item {
+    background-color: #460066;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: system-ui;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.jogos-container {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center;
+    gap: 20px; /* Espaço entre as divs */
+    padding: 40px;
+}
+
+.jogo1, .jogo2, .jogo3 {
+    display: flex;
+    background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    border: 3px solid rgba(65, 1, 107, 0.363); /* Borda em volta da imagem */
+    border-radius: 15px; /* Bordas arredondadas */
+    width: 420px; /* Largura do botão */
+    height: 300px; /* Altura do botão */
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-align: center;
+    overflow: hidden; /* impede que o conteúdo exceda o contêiner */
+}
+
+.jogo1 {
+    background-image: url('castelo.jpeg');
+}
+
+.jogo2 {
+    background-image: url('Untitled Project (6).jpg');
+}
+
+.jogo3 {
+    background-image: url('iniciomacaco.jpeg'); /* Verifique se a imagem está no local correto */
+}
+
+.jogo-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    line-height: 250px; /* Centraliza verticalmente o texto */
+}
+
+.jogo1:hover,
+.jogo2:hover,
+.jogo3:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do texto ao passar o mouse */
+}
+
+
+.nossos{
+    background-color: rgba(80, 0, 133, 0.103);
+    margin: 20px auto; /* 'auto' centraliza horizontalmente */
+    text-align: justify;
+    display: block; /* Exibe como bloco */
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: lighter;
+    transition: transform 0.3s ease;
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+
+
+.video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+
+}
+
+.footer-logo {
+    width: 35px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 35px; /* Ajuste o tamanho da imagem conforme necessário */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}

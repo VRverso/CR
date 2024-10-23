@@ -1,0 +1,173 @@
+/* Reset de margens e padrões do body */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    overflow: hidden;
+    background-image: url(fundoselva.jpg);
+    background-size: cover;
+}
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color:black;
+    z-index: 1004; /* Fica acima de outros elementos */
+    width: 100%; /* O cabeçalho ocupará a largura total da página */
+    height: 60px; /* Altura do cabeçalho */
+}
+.cabecalho-menu-item {
+    background-color: #003311;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+.logo {
+    width: 200px; /* ajuste conforme necessário */
+    height: 50; /* mantém a proporção */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* Tela de início */
+#start-screen {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    width: 600px; /* Largura igual ao labirinto */
+    height: 600px; /* Altura igual ao labirinto */
+    transform: translate(-50%, -50%); /* Centraliza a tela de início */
+    text-align: center;
+    background-image: url(startmacaco.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px;
+    z-index: 1001; /* Garante que fique acima do labirinto */
+    margin-top: 140px; /* Ajuste conforme necessário */
+}
+#start-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#start-button:hover {
+    background-color: gray;
+}
+
+/* Esconde o game container até o jogo começar */
+.hidden {
+    display: none;
+}
+/* Contêiner do jogo ocupando a tela inteira */
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Mantém o fundo transparente */
+}
+
+/* Estilização do labirinto */
+#maze {
+    display: grid;
+    grid-template-columns: repeat(20, 30px);
+    grid-template-rows: repeat(15, 30px);
+    position: relative;
+    background-image: url(fundoselva.jpg); /* Fundo do labirinto transparente */
+
+}
+
+/* Células do labirinto */
+.cell {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+/* Células que são paredes */
+.wall {
+    background-image: url('parede.png');
+    background-size: cover; /* Tente usar 'contain' ou 'cover' */
+    background-position: center; /* Centraliza a imagem */
+}
+
+/* Chão do labirinto */
+.cell:not(.wall) {
+    background-color: #38291a;
+    background-size: cover;
+}
+
+/* Estilização do jogador */
+.player {
+    background-image: url('macaco.png'); /* Imagem padrão do macaco (frente) */
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease;
+}
+
+/* Célula de saída */
+.exit {
+    background-image: url('chegada.png');
+    background-size: cover;
+    border-radius: 5px;
+}
+
+/* Estilização do temporizador */
+#timer {
+    position: absolute;
+    top: 0px; /* Aumente ou diminua este valor conforme necessário */
+    left: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+/* Estilo da tela de game over */
+#game-over {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: none; /* Inicialmente escondida */
+    position: absolute;
+}
+
+/* Estilo quando o game over está visível */
+#game-over.show {
+    display: block; /* Exibe a tela de game over */
+}
+
+/* Estilo para esconder o game over */
+.hidden {
+    display: none;
+}

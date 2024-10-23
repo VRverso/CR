@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: rgb(46, 46, 46);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: justify;
+    font-weight: bold;
+}
+    
+.cabecalho-menu-item {
+    background-color: #460066;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: system-ui;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+.video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* coloca o vídeo atrás do conteúdo */
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+.logo {
+    width: 200px; /* ajuste conforme necessário */
+    height: 42; /* mantém a proporção */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff4654;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.empresa {
+    background-color: rgba(0, 0, 0, 0.911);
+    margin: 20px;
+    text-align: justify;
+    display: inline-block; 
+    padding: 10px 20px; 
+    border: 2px solid rgba(65, 1, 107, 0.363); /* cor e espessura da borda */
+    border-radius: 15px; 
+    font-size: 20px; 
+    font-family: system-ui;
+    font-weight: bold;
+    
+}
+
+.projeto {
+    background-color:rgba(0, 0, 0, 0.911) ;
+    margin: 20px;
+    text-align: justify;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid rgba(65, 1, 107, 0.363); 
+    border-radius: 15px; 
+    font-size: 20px; 
+    font-family: system-ui;
+    font-weight: bold;
+    
+}
+
+.Integrantes {
+    background-color: rgba(80, 0, 133, 0.103);
+    margin: 20px auto; /* 'auto' centraliza horizontalmente */
+    text-align: center;
+    display: block; 
+    padding: 10px 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: system-ui;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    width: fit-content; 
+    
+}
+
+.yasmin, .mel, .isa, .borges, .gb {
+    width: 300px; 
+    transition: transform 0.3s ease; 
+}
+
+.gb:hover, .borges:hover, .isa:hover, .mel:hover, .yasmin:hover  {
+    transform: scale(1.2); 
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+.footer-logo {
+    width: 35px; 
+    height: 35px;
+    margin-right: 10px; 
+}
+
+.nossos {
+    margin: 20px auto; 
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid rgba(65, 1, 107, 0.363); 
+    border-radius: 15px; 
+    font-size: 20px; 
+    font-family: system-ui;
+    font-weight: bold;
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+.nossos-conteudo {
+    display: flex; /* Usa Flexbox para alinhar a imagem e o texto */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Garante espaço entre texto e imagem */
+}
+
+.nossos-conteudo p {
+    flex: 1; /* Faz o texto ocupar todo o espaço disponível */
+    margin-right: 40px; /* Espaço entre o texto e a imagem */
+}
+
+.nossos-imagem {
+    width: 160px; /* Defina o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px; /* Bordas arredondadas */
+}

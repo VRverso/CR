@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>já pra forca países</title>
+    <link rel="icon" href="Logotipo 500x500  px. (4).png" type="image/x-icon"> 
+    <style>
+        /* CSS reset */
+        body {
+    padding-top: 80px; /* Adiciona um padding-top para evitar que o conteúdo fique atrás do cabeçalho */
+    background-image: url('pum.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+
+        header {
+            background-image: url('pink-texture-11.jpg'); /* Substitua pelo caminho da sua imagem */
+            box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.1); 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(209, 172, 203, 0.863);
+        
+        }
+
+    .cabecalho-menu-item {
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.2em; /* Aumenta o tamanho do texto */
+    background-image: url('SETA.PNG'); /* Caminho da imagem do botão */
+    background-repeat: no-repeat;
+    background-position: center; /* Posição da imagem */
+    background-size: 100%; /* Ajusta o tamanho da imagem dentro do botão */
+    border: none; /* Remove a borda */
+    border-radius: 50px;
+    width: 150px; /* Largura aumentada */
+    height: 50px; /* Altura aumentada */
+    font-weight: bold; /* Texto mais forte */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.459); /* Adiciona uma sombra para dar mais destaque */
+}
+
+        .logo {
+            width: 150px; /* Tamanho da logo */
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        #imagem-forca {
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 3px;
+        }
+
+        #palavra-secreta {
+            font-size: 2em;
+            margin: 20px;
+        }
+
+        .letras {
+            font-size: 2em;
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+            border-bottom: 2px solid #000;
+            margin: 0 5px;
+        }
+
+        #mensagem-erro {
+            color: red;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        .teclas button {
+            margin-top: 20px;
+            font-size: 1.5em;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #afee39; /* Cor de fundo inicial (verde claro) */
+            color: white; /* Cor do texto */
+            border: 10px; /* Remove a borda */
+            border-radius: 70px; /* Bordas arredondadas */
+            transition: background-color 0.3s; /* Transição suave de cor */
+        }
+
+        .teclas button:hover {
+            background-color: #e67e22; /* Cor ao passar o mouse (laranja mais escuro) */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #3d3c3cf3;
+            margin-top: 102px;
+            color: #ffffff;
+        }
+        .container-imagem-abaixo {
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .imagem-abaixo {
+            margin: 90px ;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);     
+            max-width: 800px;
+            width: 200%;
+            height: 60PX;
+            border-radius: 20px;
+            margin: 4px;
+        }
+
+        #botao-reiniciar {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #botao-reiniciar:hover {
+            background-color: #d35400;
+        }
+
+        .dica {
+            margin-top: -5px;
+            font-size: 1.5em; /* Aumenta o tamanho da fonte */
+            font-weight: bold; /* Texto em negrito */
+            border-radius: 10px; /* Bordas arredondadas */
+            color: rgb(0, 0, 0);
+        }
+
+        .mensagem {
+            font-size: 1.2em;
+            color: #333;
+            margin: 20px;
+        }
+
+        /* Estilo da imagem de perda */
+        #imagem-perda {
+    display: none; /* Oculta a imagem por padrão */
+    margin: 20px auto; /* Diminui a margem para centralizar e reduzir a distância */
+    width: 500px; /* Aumenta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Certifica que a imagem é tratada como um bloco */
+}
+
+/* Estilo da imagem de vitória */
+#imagem-vitoria {
+    display: none; /* Oculta a imagem por padrão */
+    margin: 20px auto; /* Diminui a margem para centralizar e reduzir a distância */
+    width: 500px; /* Aumenta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Certifica que a imagem é tratada como um bloco */
+}  
+
+
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1><img src="logo.VRverso.png" alt="" class="logo" /></h1>
+        <nav class="cabecalho-menu">
+            <a class="cabecalho-menu-item" href="final2.html"></a>
+        </nav>
+    </header>
+    
+    <!-- Imagem da forca que mudará -->
+    <div class="foto">
+        <img id="imagem-forca" src="fo1.png" alt="Imagem Central">
+    </div>
+
+    <!-- Palavra secreta com espaços para letras -->
+    <div id="palavra-secreta"></div>
+
+    <!-- Exibição da dica -->
+    <div class="dica" id="dica"></div>
+    <!-- Exibição da dica -->
+<div class="dica" id="dica"></div>
+
+<!-- Div para exibir mensagens de aviso -->
+<div id="mensagem-aviso" class="mensagem" style="color: red;"></div>
+
+ <!-- Mensagem de erro ao escolher uma letra incorreta -->
+ <div id="mensagem-erro" class="mensagem"></div>
+    <div class="container-imagem-abaixo">
+
+        <img class="imagem-abaixo" src="FUNI].png" alt="Imagem Abaixo da Forca">
+    </div>
+
+    <!-- Imagem que aparece quando o jogador perde -->
+    <img id="imagem-perda" src="Logotipo 500x500  px. (12).png" alt="Você perdeu!">
+
+    <!-- Imagem que aparece quando o jogador ganha -->
+    <img id="imagem-vitoria" src="Logotipo 500x500  px. (13).png" alt="Você ganhou!">
+
+    <!-- Botão de Reiniciar -->
+    <div id="reiniciar-container" style="display: none;">
+        <button id="botao-reiniciar" onclick="reiniciarJogo()">Reiniciar</button>
+    </div>
+
+    <!-- Teclado de letras -->
+    <div id="teclado" class="teclas"></div>
+
+    <footer>
+        <p>&copy; 2024 VR verso.</p>
+    </footer>
+
+    <script>
+        // Palavras e dicas correspondentes
+        const palavrasComDicas = [
+    { palavra: 'Brasil', dica: 'O maior país da América do Sul, famoso pelo Carnaval e pela Amazônia.' },
+    { palavra: 'japao', dica: 'Uma ilha na Ásia, conhecida pela sua tecnologia avançada e cultura rica, incluindo o sushi' }, // Correção aqui
+    { palavra: 'Franca', dica: 'Famosa por sua arte, moda e a Torre Eiffel, localizada em Paris.' },
+    { palavra: 'Alemanha', dica: 'Um país europeu conhecido por sua história, cervejas e o Oktoberfest.' },
+    { palavra: 'Italia', dica: 'Conhecida pela sua culinária, arte renascentista e lugares como Roma e Veneza.' },
+    { palavra: 'Estados Unidos', dica: 'Um país da América do Norte, famoso por sua diversidade e o sonho americano' },
+    { palavra: 'Astralia', dica: 'Uma nação insular e continente conhecido por sua vida selvagem única e Sydney.' },
+    { palavra: 'Canada', dica: 'O segundo maior país do mundo, famoso por suas paisagens naturais,pelo frio e pelo cantor "Shawn mendez"' },
+    { palavra: 'India', dica: ' Um país sul-asiático conhecido por sua rica cultura famoso por suas paisagens naturais e nojeiras.' },
+    { palavra: 'Inglaterra', dica:' conhecido pela sua história e monarquia e pela falta do "one direction"' },
+    { palavra: 'China', dica: 'O país mais populoso do mundo, famoso por sua Grande Muralha e por suas marcas.' }
+];
+
+
+        let palavraSecreta, dicaPalavra, palavraMostrada, erros, maxErros = 7;
+
+        // Escolhe uma palavra e sua dica aleatoriamente
+        function iniciarJogo() {
+            const sorteio = Math.floor(Math.random() * palavrasComDicas.length);
+            palavraSecreta = palavrasComDicas[sorteio].palavra.toUpperCase();
+            dicaPalavra = palavrasComDicas[sorteio].dica;
+            palavraMostrada = Array(palavraSecreta.length).fill('_');
+            erros = 0;
+
+            atualizarPalavra();
+            exibirDica();
+            atualizarImagem();
+            mostrarBotaoReiniciar(false);
+            document.getElementById('mensagem-erro').innerHTML = '';
+            document.getElementById('imagem-perda').style.display = 'none'; // Oculta a imagem de perda
+            document.getElementById('imagem-vitoria').style.display = 'none'; // Oculta a imagem de vitória no início
+            criarTeclado();
+        }
+
+        // Atualiza a dica exibida
+        function exibirDica() {
+            const dicaElement = document.getElementById('dica');
+            dicaElement.innerHTML = '<strong>Dica:</strong> ' + dicaPalavra;
+        }
+
+        // Atualiza a palavra secreta exibida
+        function atualizarPalavra() {
+            const palavraSecretaElement = document.getElementById('palavra-secreta');
+            palavraSecretaElement.innerHTML = '';
+            palavraMostrada.forEach(letra => {
+                const span = document.createElement('span');
+                span.classList.add('letras');
+                span.innerText = letra;
+                palavraSecretaElement.appendChild(span);
+            });
+        }
+
+        // Mostra a mensagem de erro ao jogador
+        function mostrarMensagemErro(letra) {
+            const mensagemErro = document.getElementById('mensagem-erro');
+            mensagemErro.innerHTML = 'A letra "' + letra + '" não está na palavra.';
+        }
+
+        // Atualiza a imagem da forca de acordo com o número de erros
+        function atualizarImagem() {
+            const imagemForca = document.getElementById('imagem-forca');
+            imagemForca.src = 'fo' + (erros + 1) + '.png'; // Alterar o número da imagem de acordo com os erros
+        }
+
+        // Função para quando o jogador perde
+       // Função para quando o jogador perde
+// Função para quando o jogador perde
+function jogadorPerdeu() {
+    document.getElementById('mensagem-erro').innerHTML = 'Você foi enforcado! Fim de jogo.';
+    
+    // Adiciona a exibição da palavra secreta
+    document.getElementById('mensagem-aviso').innerHTML = 'A palavra era: <strong>' + palavraSecreta + '</strong>'; 
+    
+    // Oculta a imagem de fundo
+    document.querySelector('.container-imagem-abaixo').style.display = 'none';
+    
+    // Mostra a imagem de derrota
+    document.getElementById('imagem-perda').style.display = 'block'; 
+    document.getElementById('imagem-forca').style.display = 'none'; // Oculta a imagem da forca
+
+    // Oculta o teclado
+    document.getElementById('teclado').style.display = 'none';
+
+    // Mostra o botão de reiniciar
+    mostrarBotaoReiniciar(true);
+}
+
+
+// Função para quando o jogador ganha
+function jogadorGanhou() {
+    document.getElementById('mensagem-erro').innerHTML = 'Parabéns! Você adivinhou a palavra!';
+    
+    // Oculta a imagem de fundo
+    document.querySelector('.container-imagem-abaixo').style.display = 'none';
+    
+    document.getElementById('imagem-vitoria').style.display = 'block'; // Mostra a imagem de vitória
+    document.getElementById('imagem-forca').style.display = 'none'; // Oculta a imagem da forca
+    mostrarBotaoReiniciar(true);
+}
+
+
+   
+        // Reinicia o jogo
+        // Função para reiniciar o jogo
+// Exibe o botão de reiniciar
+function mostrarBotaoReiniciar() {
+    document.getElementById('reiniciar-container').style.display = 'block';
+}
+
+// Reinicia o jogo
+function reiniciarJogo() {
+    // Recarrega a página para reiniciar o jogo
+    location.reload();
+}
+
+function mostrarBotaoReiniciar() {
+            document.getElementById('reiniciar-container').style.display = 'block';
+        }
+
+        // Exibe a imagem de derrota
+        function mostrarImagemDerrota() {
+            document.getElementById('Plano de fundo Zoom 1920x1080  px. (4).jpeg').style.display = 'block';
+        }
+
+        function criarTeclado() {
+    const tecladoElement = document.getElementById('teclado');
+    tecladoElement.innerHTML = ''; // Limpa o teclado anterior
+    const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    
+    for (let i = 0; i < letras.length; i++) {
+        const botao = document.createElement('button');
+        botao.innerText = letras[i];
+        botao.onclick = () => escolherLetra(letras[i]);
+        tecladoElement.appendChild(botao);
+        
+        // Adiciona uma quebra de linha a cada 10 letras, por exemplo
+        if ((i + 1) % 10 === 0) {
+            tecladoElement.appendChild(document.createElement('br'));
+        }
+    }
+}
+        
+let letrasDigitadas = []; // Array para armazenar letras já digitadas
+
+// Lógica para escolher uma letra
+function escolherLetra(letra) {
+    const mensagemAviso = document.getElementById('mensagem-aviso'); // Obtém a div de mensagem de aviso
+
+    // Verifica se a letra já foi digitada
+    if (letrasDigitadas.includes(letra)) {
+        mensagemAviso.innerHTML = 'Você já digitou a letra "' + letra + '". Tente outra!'; // Atualiza a mensagem na div
+        return; // Sai da função se a letra já foi escolhida
+    }
+
+    letrasDigitadas.push(letra); // Adiciona a letra escolhida ao array
+
+    // Limpa a mensagem de aviso ao escolher uma nova letra
+    mensagemAviso.innerHTML = '';
+
+    if (palavraSecreta.includes(letra)) {
+        for (let i = 0; i < palavraSecreta.length; i++) {
+            if (palavraSecreta[i] === letra) {
+                palavraMostrada[i] = letra; // Atualiza a letra correta na palavra mostrada
+            }
+        }
+        atualizarPalavra();
+    } else {
+        erros++; // Incrementa o número de erros
+        atualizarImagem(); // Atualiza a imagem da forca
+        mostrarMensagemErro(letra); // Mostra mensagem de erro
+    }
+
+    // Verifica se o jogador perdeu
+    if (erros >= maxErros) {
+        jogadorPerdeu();
+    }
+
+    // Verifica se o jogador ganhou
+    if (!palavraMostrada.includes('_')) {
+        jogadorGanhou();
+    }
+}
+
+
+        // Mostra o botão de reiniciar
+        function mostrarBotaoReiniciar(exibir) {
+            document.getElementById('reiniciar-container').style.display = exibir ? 'block' : 'none';
+        }
+
+        // Inicia o jogo ao carregar a página
+        window.onload = iniciarJogo;
+    </script>
+</body>
+</html>
