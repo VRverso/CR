@@ -105,7 +105,6 @@ nav ul li a {
     font-size: 20px; 
     font-family: system-ui;
     font-weight: bold;
-    text-align: justify;
     
 }
 
@@ -161,8 +160,7 @@ footer {
 }
 
 .nossos {
-    margin: 20px auto; 
-    text-align: left; /* Alinha o texto à esquerda */
+    margin: 20px auto;
     margin: 20px;
     display: inline-block;
     padding: 10px 20px;
@@ -171,18 +169,21 @@ footer {
     font-size: 20px; 
     font-family: system-ui;
     font-weight: bold;
-    border-radius: 15px; /* Bordas arredondadas */
+    border-radius: 15px
+    text-align: justify;; /* Bordas arredondadas */
 }
 
 .nossos-conteudo {
     display: flex; /* Usa Flexbox para alinhar a imagem e o texto */
     align-items: center; /* Alinha verticalmente */
     justify-content: space-between; /* Garante espaço entre texto e imagem */
+    text-align: justify;
 }
 
 .nossos-conteudo p {
     flex: 1; /* Faz o texto ocupar todo o espaço disponível */
     margin-right: 40px; /* Espaço entre o texto e a imagem */
+    text-align: justify;
 }
 
 .nossos-imagem {
